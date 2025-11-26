@@ -1,0 +1,186 @@
+/* ======== ESTILO GENERAL ======== */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #90caf9, #1e88e5);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 30px; /* espacio para la barra de menú fija */
+}
+
+.titulo {
+    font-size: 40px;
+    margin-top: 40px;
+    animation: aparecer 2s ease;
+}
+
+.descripcion {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Animación */
+@keyframes aparecer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* ======== NAVBAR SUPERIOR ======== */
+
+.navbar {
+    width: 100%;
+    background-color: #0d47a1;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 8px 12px;
+    display: block;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #42a5f5;
+    border-radius: 5px;
+}
+
+
+/* ======== MENÚ DESPLEGABLE ======== */
+
+.dropdown-menu {
+    list-style: none;
+    background-color: #1565c0;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    min-width: 160px;
+    border-radius: 8px;
+    padding: 0;
+    display: none;
+    animation: fade 0.3s ease;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #64b5f6;
+}
+
+/* Mostrar menú al pasar el mouse */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Animación de menú */
+@keyframes fade {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* ============================
+   MENÚ 1 – EFECTO SLIDE & GLOW
+   ============================ */
+.menu1-container {
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 60%;
+    margin: auto;
+}
+
+.menu1 button {
+    background: #1e88e5;
+    border: none;
+    padding: 15px 25px;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 0 10px transparent;
+}
+
+.menu1 button:hover {
+    transform: translateX(15px);
+    background: #64b5f6;
+    box-shadow: 0 0 20px #90caf9;
+}
+
+/* ============================
+   MENÚ 2 – TARJETAS 3D ROTANTES
+   ============================ */
+.menu2 {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card2 {
+    background: white;
+    color: black;
+    width: 150px;
+    padding: 25px;
+    border-radius: 20px;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card2:hover {
+    transform: rotateY(20deg) scale(1.1);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+}
+
+/* ============================
+   MENÚ 3 – BOTONES NEÓN
+   ============================ */
+.menu3 button {
+    background: black;
+    color: #0ff;
+    border: 3px solid #0ff;
+    padding: 15px 40px;
+    font-size: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-shadow: 0 0 10px #0ff;
+    box-shadow: 0 0 15px #0ff;
+}
+
+.menu3 button:hover {
+    background: #0ff;
+    color: black;
+    box-shadow: 0 0 30px #0ff, 0 0 50px #0ff;
+    transform: scale(1.15);
+}
